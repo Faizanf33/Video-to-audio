@@ -17,6 +17,7 @@ logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.DEBUG, fil
 def video_to_audio(fileName):
 	"""
 	Usage:
+	python3 [video_to_audio.py] [arg] ...
 	python3 [video_to_audio.py] [options] [arg] ...
 
 	Options and arguments (and corresponding environment variables):
