@@ -19,11 +19,18 @@ $ cd Video-to-audio/
 // Manually enter file(s) to convert
 $ python3 video_to_audio.py <file1> <file2> ...
 
-// Auto convert all files in current directory
+// Auto convert all files in current/specified directory
 $ python3 video_to_audio.py -a
+$ python3 video_to_audio.py -a <path>
+
+// Convert specified format, e.g. mp4, webm, mkv
+$ python3 video_to_audio.py -f <format>
+
 ```
 
 ## Includes:
+* [x] Convert multiple file(s).
+* [x] Convert specified format file(s)
 * [x] Seperate directory for audio files.
 * [x] Log file for error(s) or reporting.
-* [x] Convert multiple files or pass '-a' to convert all files in current directory. 
+
