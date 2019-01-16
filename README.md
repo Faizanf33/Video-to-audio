@@ -15,17 +15,26 @@ $ sudo apt install python3 ffmpeg lame
 ## Usage:
 ```bash
 $ cd Video-to-audio/
-
-// Manually enter file(s) to convert
+```
+- *Manually* enter file(s) to convert
+```bash
 $ python3 video_to_audio.py <file1> <file2> ...
-
-// Auto convert all files in current/specified directory
+```
+- *Auto* convert all files in current/specified directory
+```bash
 $ python3 video_to_audio.py -a
 $ python3 video_to_audio.py -a <path>
-
-// Convert specified format, e.g. mp4, webm, mkv
+```
+- Convert specified format, e.g. mp4, webm, mkv
+```bash
 $ python3 video_to_audio.py -f <format>
-
+```
+__Example__
+```bash
+$ python3 video_to_audio 'file1.mp4' 'file2.webm' '/video/file3.mkv'
+$ python3 video_to_audio -a 
+$ python3 video_to_audio -a '/video'
+$ python3 video_to_audio -f 'mp4'
 ```
 
 ## Includes:
@@ -33,4 +42,3 @@ $ python3 video_to_audio.py -f <format>
 * [x] Convert specified format file(s)
 * [x] Seperate directory for audio files.
 * [x] Log file for error(s) or reporting.
-
