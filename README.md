@@ -1,11 +1,11 @@
 # Video-to-audio (Convert video file(s) to audio(mp3))
 ### Forked from 
-* __Aditya Sharma__ [adityashrm21](https://github.com/adityashrm21)
+*__Aditya Sharma__* [adityashrm21](https://github.com/adityashrm21)
 
 ## Requirements:
-- * Python3x
-- * Ffmpeg 
-- * Lame
+- __Python3x__
+- __Ffmpeg__ 
+- __Lame__
 
 ### Install requirements using terminal:
 ```bash
