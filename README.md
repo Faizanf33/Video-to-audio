@@ -31,10 +31,10 @@ $ python3 video_to_audio.py -f <format>
 ```
 __Example__
 ```bash
-$ python3 video_to_audio 'file1.mp4' 'file2.webm' '/video/file3.mkv'
-$ python3 video_to_audio -a 
-$ python3 video_to_audio -a '/video'
-$ python3 video_to_audio -f 'mp4'
+$ python3 video_to_audio.py 'file1.mp4' 'file2.webm' '/video/file3.mkv'
+$ python3 video_to_audio.py -a 
+$ python3 video_to_audio.py -a '/video'
+$ python3 video_to_audio.py -f 'mp4'
 ```
 
 ## Includes:
