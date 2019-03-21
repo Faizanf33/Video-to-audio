@@ -1,11 +1,11 @@
 # Video-to-audio (Convert video file(s) to audio(mp3))
-### Forked from 
+### Forked from
 *__Aditya Sharma__* [adityashrm21](https://github.com/adityashrm21)
 
 ## Requirements:
-- __Python3x__
-- __Ffmpeg__ 
-- __Lame__
+- __python3x__
+- __ffmpeg__
+- __lame__
 
 ### Install requirements using terminal:
 ```bash
@@ -18,23 +18,27 @@ $ cd Video-to-audio/
 ```
 - *Manually* enter file(s) to convert
 ```bash
-$ python3 video_to_audio.py <file1> <file2> ...
+$ python3 vi2au.py -m <file1> <file2> ...
 ```
 - *Auto* convert all files in current/specified directory
 ```bash
-$ python3 video_to_audio.py -a
-$ python3 video_to_audio.py -a <path>
+$ python3 vi2au.py -d
+$ python3 vi2au.py -d <path>
 ```
 - Convert specified format, e.g. mp4, webm, mkv
 ```bash
-$ python3 video_to_audio.py -f <format>
+$ python3 vi2au.py -f <format>
+```
+- Specify output directory
+```bash
+$ python3 vi2au.py -o <path>
 ```
 __Example__
 ```bash
-$ python3 video_to_audio.py 'file1.mp4' 'file2.webm' '/video/file3.mkv'
-$ python3 video_to_audio.py -a 
-$ python3 video_to_audio.py -a '/video'
-$ python3 video_to_audio.py -f 'mp4'
+$ python3 vi2au.py -m 'file1.mp4' 'file2.webm' '/video/file3.mkv' -o '/music'
+$ python3 vi2au.py -d -o '/music'
+$ python3 vi2au.py -d '/video' -o '/music'
+$ python3 vi2au.py -f 'mp4'
 ```
 
 ## Includes:
