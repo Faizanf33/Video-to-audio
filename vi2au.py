@@ -115,7 +115,7 @@ if __name__ == '__main__':
 	if '-h' in sys.argv:
 		help(video_to_audio)
 		exit()
-		
+
 	try:
 		file_count = main()
 		if file_count > 0:
