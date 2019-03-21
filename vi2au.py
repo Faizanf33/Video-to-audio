@@ -56,10 +56,6 @@ def video_to_audio(fileName):
 def main():
 	file_count = 0
 	files = []
-	if ('-h' in sys.argv):
-		help(video_to_audio)
-		return
-
 	if ('-d' in sys.argv):
 		i = sys.argv.index('-d')
 		os.chdir(sys.argv[i + 1]) if os.path.exists(sys.argv[i + 1]) else os.getcwd()
@@ -116,6 +112,10 @@ def mov_to_dir(audio_dir):
 
 # install ffmpeg and/or lame if you get an error saying that the program is currently not installed
 if __name__ == '__main__':
+	if '-h' in sys.argv:
+		help(video_to_audio)
+		exit()
+		
 	try:
 		file_count = main()
 		if file_count > 0:
