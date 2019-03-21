@@ -65,15 +65,16 @@ def main():
 		os.chdir(sys.argv[i + 1]) if os.path.exists(sys.argv[i + 1]) else os.getcwd()
 
 	if ('-m' in sys.argv):
-		index = sys.argv.index('-m')
-		for file in sys.argv[index + 1:]:
+		i = sys.argv.index('-m')
+		for file in sys.argv[i + 1:]:
 			if not file.startswith('-'):
 				files.append(file)
 			else:
 				break
 
 	if ('-f' in sys.argv):
-		for file in glob('*.{}'.format(sys.argv[2])):
+		i = sys.argv.index('-f')
+		for file in glob('*.{}'.format(sys.argv[i + 1])):
 			files.append(file)
 
 	if not files:
