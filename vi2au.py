@@ -116,7 +116,7 @@ def mov_to_dir(audio_dir):
 
 # install ffmpeg and/or lame if you get an error saying that the program is currently not installed
 if __name__ == '__main__':
-	if '-h' in sys.argv:
+	if '-h' in sys.argv or '--help' in sys.argv:
 		help(video_to_audio)
 		exit()
 
