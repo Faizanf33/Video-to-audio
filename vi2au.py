@@ -62,16 +62,20 @@ def main():
 
 	if ('-m' in sys.argv):
 		i = sys.argv.index('-m')
-		for file in sys.argv[i + 1:]:
-			if not file.startswith('-'):
-				files.append(file)
+		for arg in sys.argv[i + 1:]:
+			if not arg.startswith('-'):
+				files.append(arg)
 			else:
 				break
 
 	if ('-f' in sys.argv):
 		i = sys.argv.index('-f')
-		for file in glob('*.{}'.format(sys.argv[i + 1])):
-			files.append(file)
+		for arg in sys.argv[i + 1:]:
+			if not arg.startswith('-'):
+				for file in glob('*.{}'.format(arg)):
+					files.append(file)
+			else:
+				break
 
 	if not files:
 		for file in os.listdir():
