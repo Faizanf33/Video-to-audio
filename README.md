@@ -1,14 +1,13 @@
 # Video-to-audio 
- #### *Convert video file(s) to audio(mp3)*
+ #### *Convert video file(s) to audio*
 ___
 ## Requirements:
 - __python3x__
 - __ffmpeg__
-- __lame__
 
 ### Install requirements using terminal:
 ```bash
-$ sudo apt install python3 ffmpeg lame
+$ sudo apt install python3 ffmpeg
 ```
 
 ## Usage:
@@ -29,7 +28,7 @@ $ python3 vi2au.py -d <path> <path> ...
 $ python3 vi2au.py -f <format>
 $ python3 vi2au.py -f <format> <format> ...
 ```
-- Specify output directory
+- Specify output directory (default = ~/Music)
 ```bash
 $ python3 vi2au.py -o <path>
 $ python3 vi2au.py -o <path> <path> ...
