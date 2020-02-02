@@ -133,8 +133,16 @@ class VideoToMp3(Collector):
 
 
 if __name__ == "__main__":
-    converter = VideoToMp3()
-    converter.convert()
+    args = ('-m', '-h', '--help', '-f', '-d', '-o')
+    if not any([arg for arg in argv if arg in args]):
+        print("""Usage: vi2au.py [-m MEDIA_NAME [MEDIA_NAME ...]]
+
+vi2au.py: error: You must provide at least one MEDIA_NAME.
+Type vi2au.py -h or --help to see a list of all options.""")
+
+    else:
+        converter = VideoToMp3()
+        converter.convert()
 
     if '-h' in argv or '--help' in argv:
         help(VideoToMp3)
