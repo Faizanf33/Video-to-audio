@@ -28,7 +28,7 @@ class Collector():
         self.__formats__ = self.collect_spec('-f', '*')
         self.__files__ = self.collect_spec('-m')
         self.__dirs__ = self.collect_spec('-d')
-        self.__outdir__ = self.collect_spec('-o', '~/Music')
+        self.__outdir__ = self.collect_spec('-o', '~/Downloads')
 
         self.collection = []
         self._garbage = []
