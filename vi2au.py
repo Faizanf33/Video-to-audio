@@ -1,11 +1,18 @@
 import os
 from sys import argv
 from glob import glob
-from pipes import quote
 from shutil import move
-from logging import (basicConfig, error, debug, warning, info, DEBUG, WARN, ERROR)
+from logging import (basicConfig, debug, info, warning, DEBUG)
 
-basicConfig(format="%(levelname)s:%(message)s", level=DEBUG, filename='info.log')
+# Adding directory to cache
+root = os.path.expanduser('~')
+cache_dir = root + '/.cache/video-to-audio'
+if not (os.path.exists(cache_dir)):
+    os.mkdir(root+'/.cache/video-to-audio')
+
+log_file = os.path.join(cache_dir, 'info.log')
+
+basicConfig(format="%(levelname)s:%(message)s", level=DEBUG, filename=log_file)
 
 class Collector():
     """
